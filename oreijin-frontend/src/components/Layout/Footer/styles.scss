@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  color: #423E37;
+  margin-top: 1.5rem;
+  box-shadow: 0 -4px 4px rgba(0,0,0,.1);
+
+  //== Footer links animations
+  &__navlink {
+    margin: 0.5em;
+    background:
+      linear-gradient(
+        to bottom, #423E37 0%,
+        #423E37 100%
+      );
+     background-position: 0 100%;
+     background-repeat: repeat-x;
+     background-size: 3px 3px;
+     color: #423E37;
+     text-decoration: none;
+     transition: background-size .5s;
+
+     &.active {
+      background-size: 4px 50px;
+      color: #f2c00f;
+     }
+
+     &:hover {
+      background-size: 4px 50px;
+      color: #f2c00f;
+    }
+  }
+ }
+
+.ui.menu.footer__networks {
+  justify-content: flex-end;
+}

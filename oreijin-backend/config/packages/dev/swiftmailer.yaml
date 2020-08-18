@@ -1,0 +1,3 @@
+
+swiftmailer:
+    delivery_addresses: ['entraideadaptable@gmail.com']

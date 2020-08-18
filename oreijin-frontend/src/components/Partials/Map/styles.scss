@@ -1,0 +1,23 @@
+.map__popup {
+  position :absolute;
+  text-align: center;
+  width: 100%;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  color: #423E37;
+  bottom: 0;
+}
+
+.mapboxgl-popup-content {
+  padding: 1em;
+  background-color: #423E37;
+  border-radius: 1em;
+}
+
+.mapboxgl-popup-close-button {
+  color: #f2c00f;
+}
+
+.mapbox-marker {
+  background-color: #fff;
+}

@@ -1,0 +1,57 @@
+.header {
+  &__container__connected{
+    background-color: #fff;
+    box-shadow: 0 1px 4px 4px rgba(0,0,0,0.1);
+  }
+  //== Links animations
+  &__navlink {
+    margin: 0.5em;
+    background:
+      linear-gradient(
+        to bottom, #F2C00F 0%,
+        #F2C00F 100%
+      );
+     background-position: 0 100%;
+     background-repeat: repeat-x;
+     background-size: 3px 3px;
+     color: #423E37;
+     text-decoration: none;
+     transition: background-size .5s;
+     &.active {
+      background-size: 4px 50px;
+      color: #423E37;
+     }
+     &:hover {
+      background-size: 4px 50px;
+      color: #423E37;
+    }
+  }
+}
+
+a.ui.small.centered.image.header__logo {
+  margin: 0;
+}
+
+.ui.grid>.row {
+  padding-bottom: 0;
+}
+
+.ui.image img {
+  padding: 1em 1em 0.2em 1em;
+}
+
+//== Buttons animations
+a.ui.small.button.header__button__connected:hover {
+  background-color: #423E37;
+  color: #F2C00F;
+  transition: 0.2s ease-in;
+}
+
+.ui.button.header__button__connected {
+  background-color: #F2C00F;
+  margin: 0 0.3rem;
+ &__admin {
+   background-color: #423E37;
+   color: #F2C00F;
+ }
+}

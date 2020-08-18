@@ -1,0 +1,16 @@
+// Variables for media queries used after 
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 320px;
+
+@media (min-width: $breakpoint-mobile) {
+  .ui.form .grouped.fields:last-child {
+    margin: 0.5rem auto;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .ui.form .grouped.fields:last-child {
+    margin-left: 3em;
+  }
+}
+

@@ -1,0 +1,51 @@
+.ui.home__connected {
+  margin-top: 1em;
+}
+
+.ui.segment.home__connected__services {
+  margin: 0.5em 1.8em;
+}
+
+.ui.segment.home__connected__map {
+  margin: 0.5em 1.8em;
+}
+
+.home__connected {
+
+  &__services {
+
+    &__body {
+      overflow-y: auto;
+    }
+
+    &__filter {
+      margin-bottom: 1.5rem;
+    }
+
+    &__title {
+    }
+
+    &__add {
+      background-color: #777;
+    }
+
+  }
+
+  &__map {
+    border-radius: 1em;
+    background-color: #fff;
+  }
+  
+}
+
+//== Buttons animations
+.button.ui.button.home__connected__button__list {
+  background-color: #423E37;
+  color: #f2c00f;
+
+    &.active{
+      background-color: #f2c00f;
+      color: #423E37;
+      transition: 1s ease;
+    }
+}

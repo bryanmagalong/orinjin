@@ -1,0 +1,85 @@
+easy_admin:
+    design:
+        menu:
+            - { entity: 'User', label: 'Utilisateur', permission: 'ROLE_ADMIN' }
+            - { entity: 'Service', label: 'Service', permission: 'ROLE_MODO' }
+            - { entity: 'Comment', label: 'Commentaire', permission: 'ROLE_MODO' }
+            - { entity: 'ServiceCategory', label: 'Catégorie', permission: 'ROLE_MODO' }
+
+    site_name: "O'Rinjin Administration"
+
+    entities:
+            User:
+                class: App\Entity\User
+                label: 'Utilisateur'
+                form:
+                    fields:
+                        - email
+                        - { property: plainPassword, label: 'Mot de passe' }
+                        - { property: roles, type: 'choice', type_options: { expanded: true, multiple: true, choices: { 'Utilisateur': 'ROLE_USER', 'Modérateur': 'ROLE_MODO', 'Administrateur': 'ROLE_ADMIN' }} }
+                        - { property: firstname, label: 'Prénom' }
+                        - { property: lastname, label: 'Nom' }
+                        - { property: address, label: 'Adresse' }
+                        - { property: postalCode, label: 'Code postal' }
+                        - { property: city, label: 'Ville' }
+                        - latitude
+                        - longitude
+                        - { property: birthDate, type: 'birthday', label: 'Date de naissance' }
+                        - avatar
+                        
+                list:
+                    fields:
+                        - email
+                        - { property: 'roles', type: array }
+                        - firstname
+                        - lastname
+                        - { property: "createdAt", label: "Créé le" }
+                        - { property: "updatedAt", label: "Mis à jour le" }
+            Service:
+                class: App\Entity\Service
+                label: 'Service'
+                form:
+                    fields: 
+                        - title
+                        - body
+                        - type
+                        - image
+                list:
+                    fields:
+                        - title
+                        - body
+                        - { property: "type", label: "rouge/demande, vert/proposition" }
+                        - active
+                        - user
+                        - { property: "serviceCategory", label: "Catégorie" }
+                        - { property: "createdAt", label: "crée le" }
+                        - { property: "updatedAt", label: "Mis à jour le" }
+            Comment:
+                class: App\Entity\Comment
+                label: 'Commentaire'
+                form:
+                    fields: 
+                        - body
+                        - isBlocked
+                        - user
+                        - service
+                list:
+                    fields:
+                        - body
+                        - isBlocked
+                        - { property: "createdAt", label: "crée le" }
+                        - { property: "updatedAt", label: "Mis à jour le" }
+            ServiceCategory:
+                class: App\Entity\ServiceCategory
+                label: 'Catégorie'
+                form:
+                    fields:
+                        - title
+                        - slug
+                        - services
+                list:
+                    fields:
+                        - title
+                        - slug
+                        - { property: "createdAt", label: "crée le" }
+                        - { property: "updatedAt", label: "Mis à jour le" }

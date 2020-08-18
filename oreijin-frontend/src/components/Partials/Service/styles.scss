@@ -1,0 +1,27 @@
+.button.ui.tiny.icon.button.user__services__edit {
+  background-color: #f2c00f;
+  color: #423E37;
+
+  &:hover {
+    background-color: #423E37;
+    color: #f2c00f;
+  }
+}
+
+.ui.horizontal.divider.service__info__divider {
+  margin: 16px;
+}
+
+.ui.stackable.grid.service {
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+a.event.service__feed:hover {
+  color: #423E37;
+}
+
+

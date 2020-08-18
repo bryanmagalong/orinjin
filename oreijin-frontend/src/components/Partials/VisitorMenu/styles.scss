@@ -1,0 +1,17 @@
+.header__container {
+  &__desktop{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px 4px 4px rgba(0,0,0,0.1);
+  }
+}
+  
+.ui.button.desktop__header__button {
+  height:35%;
+  margin: 0 1em;
+  top: 3.125rem;
+  background-color: #f2c00f;
+}
+  
+  

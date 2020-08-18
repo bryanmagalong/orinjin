@@ -1,0 +1,38 @@
+App\Entity\Service:
+    service_{1..10}:
+      user: '@user_*'
+      serviceCategory: '@servicecategory_*'
+      title: "test"
+      body: <text()>
+      type: 0
+      active: 1
+
+
+App\Entity\User:
+    user_{1..30}:
+      email: '<freeEmail()>'
+      roles: ["ROLE_USER"]
+      password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$24/CSMrt81aExnblf9ZwMQ\$aM3QW9kZljYXWS4tL++n3C70sqRYZuLPR0byl0Ud1uk'
+      firstName: '<firstName()>'
+      lastName: '<lastName()>'
+      address: '<streetAddress()>'
+      postalCode: '75000'
+      city: '<city()>'
+      latitude: <latitude(-90, 90)>
+      longitude: <longitude(-180, 180)>
+      birthDate: '<dateTime()>'
+            
+                        
+App\Entity\ServiceCategory:
+    servicecategory_{1..10}:
+      title: '<jobTitle()>'
+      slug: '<slug()>'
+         
+       
+     
+App\Entity\Comment: 
+   comment{1..50}: 
+      user: '@user_*'
+      service: '@service_*'
+      isBlocked: '<boolean(50)>'
+      body: '<text(420)>'

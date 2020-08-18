@@ -1,0 +1,44 @@
+@media (min-width:320px){
+  .ui.form .fields .field.profile__form {
+    margin-top: 0.8em;
+  }
+
+  .ui.button.profil__change__button {
+    margin-top: 1.2rem;
+  }
+}
+
+@media (min-width:767px){
+  .ui.form .fields .field.profile__form {
+    margin: auto 0;
+  }
+}
+
+.ui.small.image {
+  margin: 0.5em auto;
+}
+
+.service__details__avatar {
+  margin-bottom: 2em;
+}
+
+.ui.container.profil__name {
+  margin-bottom: 2em;
+}
+
+.ui.button.profil__change__button,
+button.ui.primary.button,
+.ui.button.profil__import__button {
+  background-color: #f2c00f;
+  color: #423E37;
+
+  &:hover {
+    background-color: #423E37;
+    color: #f2c00f;
+  }
+}
+
+.ui.button.profil__delete__button {
+  margin-top: 2em;
+}
+
